@@ -28,7 +28,29 @@
 
         <activity android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity"/>
+
+        <!--Menu class-->
+        <activity android:name=".animal.AnimalDetails"
+            android:label="@string/animal"/>
+        <activity android:name=".commercial.Commercial"
+            android:label="@string/commercial"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".harvest.HarvestDetails"
+            android:label="@string/harvest"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".monitoring.Monitoring"
+            android:label="@string/monitioring"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".pound.PoundDetails"
+            android:label="@string/pond"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".store.Store"
+            android:label="@string/store"
+            android:parentActivityName=".MainActivity"/>
+
+
     </application>
 
 </manifest>

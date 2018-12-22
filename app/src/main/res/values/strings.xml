@@ -6,4 +6,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <!--Menu String-->
+    <string name="pond">Pond Details</string>
+    <string name="animal">Animal Details</string>
+    <string name="monitioring"> Monitoring Performance</string>
+    <string name="commercial">Commercial Input</string>
+    <string name="harvest"> Harvest </string>
+    <string name="store">Store</string>
 </resources>

@@ -7,23 +7,27 @@
         <item
             android:id="@+id/nav_pound"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Pound Details" />
+            android:title="@string/pond" />
         <item
             android:id="@+id/nav_details"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Animal Details" />
+            android:title="@string/animal" />
         <item
             android:id="@+id/nav_monitoring"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Monitoring Parameters" />
+            android:title="@string/monitioring" />
+        <item
+            android:id="@+id/nav_commercial"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/commercial" />
         <item
             android:id="@+id/nav_harvest"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Harvest" />
+            android:title="@string/harvest" />
         <item
             android:id="@+id/nav_store"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Store" />
+            android:title="@string/store" />
 
 
     </group>

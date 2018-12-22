@@ -2,6 +2,7 @@ package com.hihasan.e_traceability.globe;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -19,6 +20,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hihasan.e_traceability.globe.animal.AnimalDetails;
+import com.hihasan.e_traceability.globe.commercial.Commercial;
+import com.hihasan.e_traceability.globe.harvest.HarvestDetails;
+import com.hihasan.e_traceability.globe.monitoring.Monitoring;
+import com.hihasan.e_traceability.globe.pound.PoundDetails;
+import com.hihasan.e_traceability.globe.store.Store;
 import com.hihasan.e_traceability.globe.utils.Value;
 
 public class MainActivity extends AppCompatActivity
@@ -92,27 +99,40 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_pound) {
             // Handle the camera action
+            Intent i=new Intent(MainActivity.this, PoundDetails.class);
+            startActivity(i);
         }
 
         else if (id == R.id.nav_details) {
+            Intent i=new Intent(MainActivity.this, AnimalDetails.class);
+            startActivity(i);
 
         }
 
         else if (id == R.id.nav_monitoring) {
+            Intent i=new Intent(MainActivity.this, Monitoring.class);
+            startActivity(i);
+
+        }
+
+        else if (id == R.id.nav_commercial) {
+            Intent i=new Intent(MainActivity.this, Commercial.class);
+            startActivity(i);
 
         }
 
         else if (id == R.id.nav_harvest) {
+            Intent i=new Intent(MainActivity.this, HarvestDetails.class);
+            startActivity(i);
 
         }
 
         else if (id == R.id.nav_store) {
+            Intent i=new Intent(MainActivity.this, Store.class);
+            startActivity(i);
 
         }
 
-        else if (id == R.id.nav_signout) {
-
-        }
 
         else if (id == R.id.nav_signout) {
             final Dialog dialog=new Dialog(context);
