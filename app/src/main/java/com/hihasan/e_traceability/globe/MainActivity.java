@@ -1,5 +1,7 @@
 package com.hihasan.e_traceability.globe;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -8,13 +10,21 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.hihasan.e_traceability.globe.utils.Value;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Context context=this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,10 +115,56 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.nav_signout) {
+            final Dialog dialog=new Dialog(context);
+            dialog.setContentView(R.layout.activity_custom);
+            dialog.setTitle("Title..");
+
+            AppCompatTextView t=(AppCompatTextView) dialog.findViewById (R.id.name);
+            t.setText(Value.sign_out_text);
+
+            AppCompatButton confirm=(AppCompatButton) dialog.findViewById (R.id.confirm);
+            AppCompatButton cancel= (AppCompatButton) dialog.findViewById (R.id.cancel);
+
+            confirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getApplicationContext(),"This will take Sinin Page",Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
 
         }
 
         else if (id == R.id.nav_exit) {
+            final Dialog dialog=new Dialog(context);
+            dialog.setContentView(R.layout.activity_custom);
+            dialog.setTitle("Title..");
+
+            AppCompatTextView t=(AppCompatTextView) dialog.findViewById (R.id.name);
+            t.setText(Value.exit_text);
+
+            AppCompatButton confirm=(AppCompatButton) dialog.findViewById(R.id.confirm);
+            AppCompatButton cancel=(AppCompatButton) dialog.findViewById (R.id.cancel);
+
+            confirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    System.exit(0);
+                }
+            });
+
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
 
         }
 
