@@ -5,6 +5,11 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/profile"/>
+
+        <item
             android:id="@+id/nav_pound"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/pond" />
