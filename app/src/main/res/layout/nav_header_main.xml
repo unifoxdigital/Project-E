@@ -37,27 +37,5 @@
         android:text="@string/nav_header_subtitle"
         android:layout_below="@id/name"/>
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/email"
-        android:layout_marginTop="8sp"
-        android:text="View Profile"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/edit_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8sp"
-        android:layout_marginLeft="8sp"
-        android:layout_below="@id/email"
-        android:layout_toRightOf="@id/profile"
-        android:text="Edit Profile"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:onClick="edit_profile"/>
 
 </RelativeLayout>
